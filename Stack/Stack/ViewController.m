@@ -13,6 +13,10 @@
 //create new node with data ;
 - (Node *)createNewNodeWithData:(int)data ;
 
+// animate label
+- (void)animateLabel:(UILabel *)label ;
+
+
 @end
 
 @implementation ViewController
@@ -22,23 +26,28 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    [self animateLabel:lblStack];
+    
     int counter = 10 ;
 
     //inserting 10 elements into stack
     while (counter-- > 0) [self pushDataToNode:10 * counter];
     
+    NSLog(@"Initial Traverse through");
     [self travers:header];
 
     //pop the last inserted node
+    NSLog(@"\n\n Poping Node");
     [self pop];
     
-    NSLog(@"Traversal Data");
+    NSLog(@"\n\n New Stack after popping node");
     [self travers:header];
     
     //deleting a specific node from stack
+    NSLog(@"\n\n Deleting node with data = 90");
     [self popNodeWithData:90 andNode:header];
     
-    NSLog(@"Traversal again");
+    NSLog(@"\n\n New Stack after deletion");
     [self travers:header];
 
 }
@@ -78,7 +87,8 @@
         return ;
         
     } else {
-        
+
+        NSLog(@"Popped Node : %d",header.data);
         header = header.next ;
     }
 }
@@ -106,7 +116,8 @@
         header = NULL ;
         
     } else if (node.next.data == data) {
-        
+
+        NSLog(@"Deleted Data = %d",data);
         node.next = node.next.next ;
         
     } else {
@@ -125,6 +136,32 @@
     _node.data = data ;
     _node.next = NULL ;
     return _node ;
+}
+
+- (void)animateLabel:(UILabel *)label {
+    
+    [UIView animateWithDuration:1.5f animations:^{
+        
+        [self scaleLabel:label WithScale:1.6f andScaleY:1.6f andAlpha:1.0f];
+        
+    } completion:^(BOOL finished) {
+        
+        [UIView animateWithDuration:1.5f animations:^{
+            
+            [self scaleLabel:label WithScale:1.0f andScaleY:1.0f andAlpha:0.2f];
+            
+        } completion:^(BOOL finished) {
+            
+            [self animateLabel:label];
+            
+        }];
+    }];
+}
+
+- (void)scaleLabel:(UILabel *)label WithScale:(float)scaleX andScaleY:(float)scaleY andAlpha:(float)alphaValue{
+    
+    label.transform = CGAffineTransformMakeScale(scaleX, scaleY) ;
+    label.alpha = alphaValue ;
 }
 
 @end

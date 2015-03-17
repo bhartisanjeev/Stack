@@ -11,8 +11,9 @@
 
 @interface ViewController : UIViewController {
     
-    Node *header ;
+    Node *header ; //header node
 
+    IBOutlet    UILabel *lblStack ;
 }
 
 // insert element to stack
