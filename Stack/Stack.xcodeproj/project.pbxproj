@@ -14,6 +14,7 @@
 		EDBF005A1AB7EE6500012E31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDBF00591AB7EE6500012E31 /* Images.xcassets */; };
 		EDBF005D1AB7EE6500012E31 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDBF005B1AB7EE6500012E31 /* LaunchScreen.xib */; };
 		EDBF00691AB7EE6500012E31 /* StackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF00681AB7EE6500012E31 /* StackTests.m */; };
+		EDBF00741AB7EEE300012E31 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = EDBF00731AB7EEE300012E31 /* Node.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		EDBF00621AB7EE6500012E31 /* StackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBF00671AB7EE6500012E31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDBF00681AB7EE6500012E31 /* StackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackTests.m; sourceTree = "<group>"; };
+		EDBF00721AB7EEE300012E31 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		EDBF00731AB7EEE300012E31 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 			children = (
 				EDBF00501AB7EE6500012E31 /* AppDelegate.h */,
 				EDBF00511AB7EE6500012E31 /* AppDelegate.m */,
+				EDBF00721AB7EEE300012E31 /* Node.h */,
+				EDBF00731AB7EEE300012E31 /* Node.m */,
 				EDBF00531AB7EE6500012E31 /* ViewController.h */,
 				EDBF00541AB7EE6500012E31 /* ViewController.m */,
 				EDBF00561AB7EE6500012E31 /* Main.storyboard */,
@@ -222,6 +227,7 @@
 				EDBF00551AB7EE6500012E31 /* ViewController.m in Sources */,
 				EDBF00521AB7EE6500012E31 /* AppDelegate.m in Sources */,
 				EDBF004F1AB7EE6500012E31 /* main.m in Sources */,
+				EDBF00741AB7EEE300012E31 /* Node.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
